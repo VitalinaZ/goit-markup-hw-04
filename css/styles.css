@@ -104,9 +104,21 @@ body {
 
 .hero-section {
   padding: 188px 0px;
-  background-color: #2e2f42;
-}
 
+  background-color: #2e2f42;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .hero-title {
   font-family: "Roboto", sans-serif;
   font-size: 56px;
@@ -153,6 +165,26 @@ body {
 .principles-item {
   width: 264px;
 }
+.principles-item::before {
+  display: block;
+  content: "";
+  height: 112px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f4f4fd;
+}
+.icon-antenna::before {
+  background-image: url(../images/antenna.svg);
+}
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+.icon-diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
+}
 .principles-title,
 .team-name {
   font-weight: 500;
@@ -162,12 +194,12 @@ body {
   color: #2e2f42;
   margin-bottom: 8px;
 }
-.principles-text,
-.team-text {
+.principles-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+
 /*-------What are we doing-------*/
 
 .doing {
@@ -211,6 +243,12 @@ body {
 .team-name {
   margin-bottom: 8px;
 }
+.team-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
 .team-wrap {
   text-align: center;
 }
@@ -227,6 +265,28 @@ body {
 }
 .team-title {
   margin-bottom: 72px;
+}
+.name-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.name-soc-item {
+  width: 40px;
+  height: 40px;
+}
+.name-soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.name-soc-icon {
+  fill: #f4f4fd;
 }
 
 /*-------footer-------*/
